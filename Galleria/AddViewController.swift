@@ -84,6 +84,11 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
     
     @IBAction func save(_ sender: Any) {
         
+        guard let title = titleField.text, !title.isEmpty else {
+            self.simpleAlert(message: "Title is required")
+            return
+        }
+        
         if item == nil {
             let entityDescription = NSEntityDescription.entity(forEntityName: "Photo", in: pc)
             let item = Photo(entity: entityDescription!, insertInto: pc)
@@ -95,7 +100,6 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
             item?.textTitle = titleField.text
             item?.textDescription = descriptionField.text
             item?.image = imageView.image?.pngData() as NSData?
-            
         }
         
         do {
@@ -106,6 +110,15 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         }
         
         navigationController?.popViewController(animated: true)
+    }
+    
+    func simpleAlert(message: String) {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        self.present(alertController, animated: true, completion: nil)
+        
+        
     }
     
 }
