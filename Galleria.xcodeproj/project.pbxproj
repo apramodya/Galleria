@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		797DC724225074B900946A2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797DC723225074B900946A2F /* AppDelegate.swift */; };
-		797DC726225074B900946A2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797DC725225074B900946A2F /* ViewController.swift */; };
 		797DC729225074B900946A2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797DC727225074B900946A2F /* Main.storyboard */; };
 		797DC72C225074B900946A2F /* Galleria.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 797DC72A225074B900946A2F /* Galleria.xcdatamodeld */; };
 		797DC72E225074BB00946A2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 797DC72D225074BB00946A2F /* Assets.xcassets */; };
 		797DC731225074BB00946A2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797DC72F225074BB00946A2F /* LaunchScreen.storyboard */; };
+		797DC73922507A5800946A2F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797DC73822507A5800946A2F /* TableViewController.swift */; };
+		797DC73B22507A7100946A2F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797DC73A22507A7100946A2F /* TableViewCell.swift */; };
+		797DC73E22507C8000946A2F /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797DC73C22507C8000946A2F /* Photo+CoreDataClass.swift */; };
+		797DC73F22507C8000946A2F /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797DC73D22507C8000946A2F /* Photo+CoreDataProperties.swift */; };
+		797DC74222507CD700946A2F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797DC74122507CD700946A2F /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		797DC720225074B900946A2F /* Galleria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Galleria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797DC723225074B900946A2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		797DC725225074B900946A2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		797DC728225074B900946A2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		797DC72B225074B900946A2F /* Galleria.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Galleria.xcdatamodel; sourceTree = "<group>"; };
 		797DC72D225074BB00946A2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		797DC730225074BB00946A2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		797DC732225074BB00946A2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		797DC73822507A5800946A2F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		797DC73A22507A7100946A2F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		797DC73C22507C8000946A2F /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		797DC73D22507C8000946A2F /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		797DC74122507CD700946A2F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797DC74222507CD700946A2F /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +49,11 @@
 		797DC717225074B900946A2F = {
 			isa = PBXGroup;
 			children = (
+				797DC73C22507C8000946A2F /* Photo+CoreDataClass.swift */,
+				797DC73D22507C8000946A2F /* Photo+CoreDataProperties.swift */,
 				797DC722225074B900946A2F /* Galleria */,
 				797DC721225074B900946A2F /* Products */,
+				797DC74022507CD700946A2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,7 +69,8 @@
 			isa = PBXGroup;
 			children = (
 				797DC723225074B900946A2F /* AppDelegate.swift */,
-				797DC725225074B900946A2F /* ViewController.swift */,
+				797DC73822507A5800946A2F /* TableViewController.swift */,
+				797DC73A22507A7100946A2F /* TableViewCell.swift */,
 				797DC727225074B900946A2F /* Main.storyboard */,
 				797DC72D225074BB00946A2F /* Assets.xcassets */,
 				797DC72F225074BB00946A2F /* LaunchScreen.storyboard */,
@@ -65,6 +78,14 @@
 				797DC72A225074B900946A2F /* Galleria.xcdatamodeld */,
 			);
 			path = Galleria;
+			sourceTree = "<group>";
+		};
+		797DC74022507CD700946A2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				797DC74122507CD700946A2F /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +159,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797DC73F22507C8000946A2F /* Photo+CoreDataProperties.swift in Sources */,
+				797DC73E22507C8000946A2F /* Photo+CoreDataClass.swift in Sources */,
 				797DC72C225074B900946A2F /* Galleria.xcdatamodeld in Sources */,
-				797DC726225074B900946A2F /* ViewController.swift in Sources */,
+				797DC73B22507A7100946A2F /* TableViewCell.swift in Sources */,
+				797DC73922507A5800946A2F /* TableViewController.swift in Sources */,
 				797DC724225074B900946A2F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
