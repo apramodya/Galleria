@@ -2,10 +2,10 @@
 A photo gallery CRUD application using CoreData
 
 ##### Features
-    1. - [x] A photo gallery app
-    2. - [x] Keep photos with a description
-    3. - [x] Edit and delete
-    4. - [ ] Secure app login
+[x] A photo gallery app
+[x] Keep photos with a description
+[x] Edit and delete
+[ ] Secure app login
 
 ![grid](https://raw.githubusercontent.com/apramodya/Galleria/master/screen%20shots/main.png)
 
