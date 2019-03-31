@@ -30,6 +30,10 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
         return frc
     }
     
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        self.tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

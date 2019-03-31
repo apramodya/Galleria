@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		793B02CB2250C67E00C4B7D6 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793B02CA2250C67E00C4B7D6 /* AddViewController.swift */; };
 		797DC724225074B900946A2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797DC723225074B900946A2F /* AppDelegate.swift */; };
 		797DC729225074B900946A2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797DC727225074B900946A2F /* Main.storyboard */; };
 		797DC72C225074B900946A2F /* Galleria.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 797DC72A225074B900946A2F /* Galleria.xcdatamodeld */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		793B02CA2250C67E00C4B7D6 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		797DC720225074B900946A2F /* Galleria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Galleria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797DC723225074B900946A2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		797DC728225074B900946A2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				797DC723225074B900946A2F /* AppDelegate.swift */,
 				797DC73822507A5800946A2F /* TableViewController.swift */,
 				797DC73A22507A7100946A2F /* TableViewCell.swift */,
+				793B02CA2250C67E00C4B7D6 /* AddViewController.swift */,
 				797DC727225074B900946A2F /* Main.storyboard */,
 				797DC72D225074BB00946A2F /* Assets.xcassets */,
 				797DC72F225074BB00946A2F /* LaunchScreen.storyboard */,
@@ -161,6 +164,7 @@
 			files = (
 				797DC73F22507C8000946A2F /* Photo+CoreDataProperties.swift in Sources */,
 				797DC73E22507C8000946A2F /* Photo+CoreDataClass.swift in Sources */,
+				793B02CB2250C67E00C4B7D6 /* AddViewController.swift in Sources */,
 				797DC72C225074B900946A2F /* Galleria.xcdatamodeld in Sources */,
 				797DC73B22507A7100946A2F /* TableViewCell.swift in Sources */,
 				797DC73922507A5800946A2F /* TableViewController.swift in Sources */,
