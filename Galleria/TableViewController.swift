@@ -9,39 +9,71 @@
 import UIKit
 import CoreData
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
+    var frc: NSFetchedResultsController = NSFetchedResultsController<NSFetchRequestResult>()
+    var pc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    func fetchRequest() -> NSFetchRequest<NSFetchRequestResult> {
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Photo")
+        let sorter = NSSortDescriptor(key: "textTitle", ascending: true)
+        
+        fetchRequest.sortDescriptors = [sorter]
+        
+        return fetchRequest
+    }
+    
+    func getFRC() -> NSFetchedResultsController<NSFetchRequestResult> {
+        frc = NSFetchedResultsController(fetchRequest: fetchRequest(), managedObjectContext: pc, sectionNameKeyPath: nil, cacheName: nil)
+        
+        return frc
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        frc = getFRC()
+        frc.delegate = self
+        
+        do {
+            try frc.performFetch()
+        } catch {
+            debugPrint(">>>>>>>>>>>>> \(error.localizedDescription)")
+            return
+        }
+        
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        let numOfRows = frc.sections?[section].numberOfObjects
+        
+        return numOfRows!
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
+        let photoItem = frc.object(at: indexPath) as! Photo
+        
+        cell.cellTitleLbl.text = photoItem.textTitle
+        cell.cellDescLbl.text = photoItem.textDescription
+        cell.cellImg.image = UIImage(data: photoItem.image! as Data)
+        
         return cell
     }
-    */
+ 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 125
+    }
 
     /*
     // Override to support conditional editing of the table view.
