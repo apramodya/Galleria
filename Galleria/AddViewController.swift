@@ -19,6 +19,7 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
     @IBOutlet weak var btn3: UIButton!
     
     var pc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var item: Photo? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,17 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         btn1.layer.cornerRadius = 5
         btn2.layer.cornerRadius = 5
         btn3.layer.cornerRadius = 5
+        
+        if item == nil {
+            self.navigationItem.title = "Add New Photo"
+        } else {
+            self.navigationItem.title = item?.textTitle
+            btn3.setTitle("Update", for: .normal)
+            
+            titleField.text = item?.textTitle
+            descriptionField.text = item?.textDescription
+            imageView.image = UIImage(data: (item?.image)! as Data)
+        }
     }
     
 
@@ -71,12 +83,20 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
     }
     
     @IBAction func save(_ sender: Any) {
-        let entityDescription = NSEntityDescription.entity(forEntityName: "Photo", in: pc)
-        let item = Photo(entity: entityDescription!, insertInto: pc)
         
-        item.textTitle = titleField.text
-        item.textDescription = descriptionField.text
-        item.image = imageView.image?.pngData() as NSData?
+        if item == nil {
+            let entityDescription = NSEntityDescription.entity(forEntityName: "Photo", in: pc)
+            let item = Photo(entity: entityDescription!, insertInto: pc)
+            
+            item.textTitle = titleField.text
+            item.textDescription = descriptionField.text
+            item.image = imageView.image?.pngData() as NSData?
+        } else {
+            item?.textTitle = titleField.text
+            item?.textDescription = descriptionField.text
+            item?.image = imageView.image?.pngData() as NSData?
+            
+        }
         
         do {
             try pc.save()

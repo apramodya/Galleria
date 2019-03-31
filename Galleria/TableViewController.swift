@@ -48,6 +48,8 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
         }
         
         self.tableView.reloadData()
+        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 
     // MARK: - Table view data source
@@ -87,17 +89,19 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let managedObject : NSManagedObject = frc.object(at: indexPath) as! NSManagedObject
+        pc.delete(managedObject)
+        
+        do {
+            try pc.save()
+        } catch {
+            debugPrint(error.localizedDescription)
+            return
+        }
     }
-    */
 
     /*
     // Override to support rearranging the table view.
@@ -114,14 +118,19 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "edit" {
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPath(for: cell)
+            let itemController: AddViewController = segue.destination as! AddViewController
+            let item: Photo = frc.object(at: indexPath!) as! Photo
+            
+            itemController.item = item
+        }
     }
-    */
-
+ 
 }

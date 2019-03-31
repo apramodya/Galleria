@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="125" id="0IT-ri-SlT" customClass="TableViewCell" customModule="Galleria" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="125" id="0IT-ri-SlT" customClass="TableViewCell" customModule="Galleria" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0IT-ri-SlT" id="WiE-xy-0Oe">
@@ -64,6 +64,7 @@
                                     <outlet property="cellDescLbl" destination="loc-JI-S8V" id="Hhg-Av-wBx"/>
                                     <outlet property="cellImg" destination="r52-bT-U9d" id="T3T-p1-U04"/>
                                     <outlet property="cellTitleLbl" destination="Gr2-p9-tJd" id="ZmZ-Sg-uYw"/>
+                                    <segue destination="fWi-lV-0dy" kind="show" identifier="edit" id="a25-Wi-agN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -238,4 +239,7 @@
     <resources>
         <image name="Placeholder" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="a25-Wi-agN"/>
+    </inferredMetricsTieBreakers>
 </document>
