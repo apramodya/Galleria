@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7913E0512251233B00A9448D /* GalleriaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913E0502251233B00A9448D /* GalleriaUITests.swift */; };
 		793B02CB2250C67E00C4B7D6 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793B02CA2250C67E00C4B7D6 /* AddViewController.swift */; };
 		797DC724225074B900946A2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797DC723225074B900946A2F /* AppDelegate.swift */; };
 		797DC729225074B900946A2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797DC727225074B900946A2F /* Main.storyboard */; };
@@ -20,7 +21,20 @@
 		797DC74222507CD700946A2F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797DC74122507CD700946A2F /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7913E0532251233B00A9448D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 797DC718225074B900946A2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 797DC71F225074B900946A2F;
+			remoteInfo = Galleria;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		7913E04E2251233B00A9448D /* GalleriaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalleriaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7913E0502251233B00A9448D /* GalleriaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleriaUITests.swift; sourceTree = "<group>"; };
+		7913E0522251233B00A9448D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		793B02CA2250C67E00C4B7D6 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		797DC720225074B900946A2F /* Galleria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Galleria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797DC723225074B900946A2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +51,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7913E04B2251233B00A9448D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		797DC71D225074B900946A2F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,12 +69,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7913E04F2251233B00A9448D /* GalleriaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7913E0502251233B00A9448D /* GalleriaUITests.swift */,
+				7913E0522251233B00A9448D /* Info.plist */,
+			);
+			path = GalleriaUITests;
+			sourceTree = "<group>";
+		};
 		797DC717225074B900946A2F = {
 			isa = PBXGroup;
 			children = (
 				797DC73C22507C8000946A2F /* Photo+CoreDataClass.swift */,
 				797DC73D22507C8000946A2F /* Photo+CoreDataProperties.swift */,
 				797DC722225074B900946A2F /* Galleria */,
+				7913E04F2251233B00A9448D /* GalleriaUITests */,
 				797DC721225074B900946A2F /* Products */,
 				797DC74022507CD700946A2F /* Frameworks */,
 			);
@@ -63,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				797DC720225074B900946A2F /* Galleria.app */,
+				7913E04E2251233B00A9448D /* GalleriaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +126,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7913E04D2251233B00A9448D /* GalleriaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7913E0572251233B00A9448D /* Build configuration list for PBXNativeTarget "GalleriaUITests" */;
+			buildPhases = (
+				7913E04A2251233B00A9448D /* Sources */,
+				7913E04B2251233B00A9448D /* Frameworks */,
+				7913E04C2251233B00A9448D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7913E0542251233B00A9448D /* PBXTargetDependency */,
+			);
+			name = GalleriaUITests;
+			productName = GalleriaUITests;
+			productReference = 7913E04E2251233B00A9448D /* GalleriaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		797DC71F225074B900946A2F /* Galleria */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 797DC735225074BB00946A2F /* Build configuration list for PBXNativeTarget "Galleria" */;
@@ -121,6 +171,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Pramodya;
 				TargetAttributes = {
+					7913E04D2251233B00A9448D = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 797DC71F225074B900946A2F;
+					};
 					797DC71F225074B900946A2F = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -140,11 +194,19 @@
 			projectRoot = "";
 			targets = (
 				797DC71F225074B900946A2F /* Galleria */,
+				7913E04D2251233B00A9448D /* GalleriaUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7913E04C2251233B00A9448D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		797DC71E225074B900946A2F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,6 +220,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7913E04A2251233B00A9448D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7913E0512251233B00A9448D /* GalleriaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		797DC71C225074B900946A2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,6 +243,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7913E0542251233B00A9448D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 797DC71F225074B900946A2F /* Galleria */;
+			targetProxy = 7913E0532251233B00A9448D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		797DC727225074B900946A2F /* Main.storyboard */ = {
@@ -194,6 +272,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7913E0552251233B00A9448D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X2332K5HVA;
+				INFOPLIST_FILE = GalleriaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pramodya.GalleriaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Galleria;
+			};
+			name = Debug;
+		};
+		7913E0562251233B00A9448D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X2332K5HVA;
+				INFOPLIST_FILE = GalleriaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pramodya.GalleriaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Galleria;
+			};
+			name = Release;
+		};
 		797DC733225074BB00946A2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -349,6 +465,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7913E0572251233B00A9448D /* Build configuration list for PBXNativeTarget "GalleriaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7913E0552251233B00A9448D /* Debug */,
+				7913E0562251233B00A9448D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		797DC71B225074B900946A2F /* Build configuration list for PBXProject "Galleria" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
